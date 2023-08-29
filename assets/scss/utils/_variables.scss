@@ -17,6 +17,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
+$brown:    #F3F1E5 !default;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -46,6 +47,8 @@ $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
+$brown:   #F3F1E5 !default;
+$lighty:  #FBFF22 !default;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -63,7 +66,9 @@ $colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "brown":      $brown,
+  "lighty":     $lighty,
 ) !default;
 // scss-docs-end colors-map
 
@@ -306,6 +311,7 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$brown:         $brown !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -317,7 +323,9 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "brown":      $brown,
+  "lighty":     $lighty,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -379,6 +387,11 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  6: $spacer * 2,
+  7: $spacer * .75,
+  8: $spacer * 3.75,
+  9: $spacer * 14.5,
+  10: $spacer * 10.9,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -389,6 +402,11 @@ $spacers: (
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+
+  10: 10%,
+  25: 25%,
+  30: 30%,
+  40: 40%,
   50: 50%,
   100: 100%
 ) !default;
@@ -398,7 +416,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
+$body-bg:                   $brown !default;
 $body-color:                $gray-900 !default;
 $body-text-align:           null !default;
 
@@ -540,7 +558,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Serif TC", "Yeseva One", "Noto Sans",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -572,6 +590,10 @@ $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * 1.125 !default;
+$h8-font-size:                $font-size-base * 3.75 !default;
+$h9-font-size:                $font-size-base * 3 !default;
+$h10-font-size:               $font-size-base * .875 !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -581,7 +603,12 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1632,3 +1659,5 @@ $kbd-bg:                            var(--#{$prefix}body-color) !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
 $pre-color:                         null !default;
+
+
